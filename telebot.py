@@ -91,7 +91,7 @@ for s in exchange_info['symbols']:
 
 
 #send message
-second_forprice = sleeptime(0,5,0)
+second_forprice = sleeptime(1,0,0)
 while 1==1:
     bot.sendMessage(receiver_id, '----------------start') 
 
