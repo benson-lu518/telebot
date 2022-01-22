@@ -4,7 +4,7 @@ import datetime
 #telebot setting---------------
 #https://api.telegram.org/bot5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg/getUpdates
 token='5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg'
-receiver_id='-649668753'
+receiver_id='-710458145'
 bot = telepot.Bot(token)
 
 
@@ -98,7 +98,7 @@ while 1==1:
     for symbol in asset:
 
         try:
-            #bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
+            bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
 
         except Exception:
             #bot.sendMessage(receiver_id, 'error: '+symbol) # send a activation message to telegram receiver id
