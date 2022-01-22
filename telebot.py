@@ -98,7 +98,7 @@ while 1==1:
     for symbol in asset:
 
         try:
-            bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
+            #bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
 
         except Exception:
             #bot.sendMessage(receiver_id, 'error: '+symbol) # send a activation message to telegram receiver id
