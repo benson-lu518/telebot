@@ -20,9 +20,9 @@ client=Client(api_key,api_secret)
 
 
 #interval setting 設定 每隔多久 print----------------
-import time
-def sleeptime(hour,min,sec):
-    return hour*3600 + min*60 + sec
+# import time
+# def sleeptime(hour,min,sec):
+#     return hour*3600 + min*60 + sec
 
 
 #price alter function-------------
@@ -91,23 +91,25 @@ for s in exchange_info['symbols']:
 
 
 #send message
-second_forprice = sleeptime(1,0,0)
+#second_forprice = sleeptime(1,0,0)
 
 
-while 1==1:
-    bot.sendMessage(receiver_id, '-----------------------start') 
+bot.sendMessage(receiver_id, '-----------------------start') 
 
-    # for symbol in asset:
+for symbol in asset:
 
-    #     try:
-    #         bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
+    try:
+        bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
 
-    #     except Exception:
-    #     #except:
-    #         #bot.sendMessage(receiver_id, 'error: '+symbol) 
-    #         pass
-    bot.sendMessage(receiver_id, '-----------------------end') 
-    time.sleep(second_forprice)
+    except Exception:
+    #except:
+        #bot.sendMessage(receiver_id, 'error: '+symbol) 
+        pass
+bot.sendMessage(receiver_id, '-----------------------end') 
+  
+#  time.sleep(second_forprice)
 
 
-
+# git add *
+# git commit -am ""
+# git push heroku master
