@@ -4,7 +4,7 @@ import datetime
 #telebot setting---------------
 #https://api.telegram.org/bot5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg/getUpdates
 token='5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg'
-receiver_id='-710458145'
+receiver_id='-649668753'  #-710458145
 bot = telepot.Bot(token)
 
 
@@ -113,3 +113,10 @@ bot.sendMessage(receiver_id, '-----------------------end')
 # git add *
 # git commit -am ""
 # git push heroku master
+
+#heroku run bash
+#ls
+#python telebot.py
+#exit
+
+#heroku ps -a telebot-binance
