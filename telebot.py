@@ -19,7 +19,7 @@ api_secret="Yd1e4PYbxBl44OZpXpeiiZANEKiza9Joc8gXJ6rXYSU4MUSRRJPCfju8vuSJoq2V"
 client=Client(api_key,api_secret)
 
 
-#interval setting 設定 每隔多久 print----------------
+#interval setting then print----------------
 # import time
 # def sleeptime(hour,min,sec):
 #     return hour*3600 + min*60 + sec
@@ -41,7 +41,7 @@ def price_alter(asset,start,end,timeframe,change):
 
     if (df['Change%'][1]>change or df['Change%'][1]<-change):
         df = df.drop(columns=['Open'])
-        #設定台灣時間   上面已轉utc 所以要轉回來
+        #setting TW tiemzone   have benn changed to utc so need to be changed to origin
         result = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
 
         result_1=result- datetime.timedelta(hours=1) 
@@ -54,7 +54,7 @@ def price_alter(asset,start,end,timeframe,change):
         return str(df)
     return 
 
-#time setting UTC(格林威治時間) 顯示前一小時 與前兩小時 -----------
+#time setting UTC an hour and two hours ago -----------
 import datetime
 gmt=datetime.datetime.now(datetime.timezone.utc)
 gmt_minus3=gmt- datetime.timedelta(hours=3) 
@@ -79,7 +79,7 @@ for s in exchange_info['symbols']:
     if ((s['symbol'] not in asset) and  (s['quoteAsset']=='USDT')):
         asset.append(s['symbol'])
 
-#一天變化一次 all crypto list
+# all crypto list
 # second_forcypto = sleeptime(24,0,0)
 # while 1==1:
 #     time.sleep(second_forcypto)
