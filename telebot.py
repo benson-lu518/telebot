@@ -4,7 +4,7 @@ import datetime
 #telebot setting---------------
 #https://api.telegram.org/bot5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg/getUpdates
 token='5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg'
-receiver_id='-649668753'  #-710458145
+receiver_id='your receiver id'
 bot = telepot.Bot(token)
 
 
