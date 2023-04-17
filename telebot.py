@@ -3,7 +3,7 @@ import datetime
 
 #telebot setting---------------
 #https://api.telegram.org/bot5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg/getUpdates
-token='5140303453:AAFw6eiUEMp_d9-Yb0RtecSpAIL8N5CS-wg'
+token='your token'
 receiver_id='your receiver id'
 bot = telepot.Bot(token)
 
