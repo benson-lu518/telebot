@@ -37,7 +37,7 @@ def price_alter(asset,start,end,timeframe,change):
 
     df=df.astype("float")
     df['Change%'] = df['Close'].pct_change()*100
-    df['Change%'][1] =round( df['Change%'][1],2 ) #小數點後兩位
+    df['Change%'][1] =round( df['Change%'][1],2 ) 
 
     if (df['Change%'][1]>change or df['Change%'][1]<-change):
         df = df.drop(columns=['Open'])
@@ -110,8 +110,6 @@ bot.sendMessage(receiver_id, '-----------------------end')
 #  time.sleep(second_forprice)
 
 
-# git add *
-# git commit -am ""
 # git push heroku master
 
 #heroku run bash
