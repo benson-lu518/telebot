@@ -19,14 +19,14 @@ api_secret="Yd1e4PYbxBl44OZpXpeiiZANEKiza9Joc8gXJ6rXYSU4MUSRRJPCfju8vuSJoq2V"
 client=Client(api_key,api_secret)
 
 
-#interval setting then print----------------
+#interval setting then print the output----------------
 # import time
 # def sleeptime(hour,min,sec):
 #     return hour*3600 + min*60 + sec
 
 
-#price alter function-------------
-def price_alter(asset,start,end,timeframe,change):
+#price alert function-------------
+def price_alert(asset,start,end,timeframe,change):
     df= pd.DataFrame(client.get_historical_klines(asset, timeframe,start,end))
 
     df=df.iloc[:,:5]
@@ -99,7 +99,7 @@ bot.sendMessage(receiver_id, '-----------------------start')
 for symbol in asset:
 
     try:
-        bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alter(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
+        bot.sendMessage(receiver_id, symbol+' 1 hour change\n'+price_alert(symbol,start,end,timeframe,change)) # send a activation message to telegram receiver id
 
     except Exception:
     #except:
